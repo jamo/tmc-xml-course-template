@@ -1,0 +1,18 @@
+testcases:
+  tests:
+  - points:
+      - '1'
+      - '2'
+    description: "TestName"
+    student_run:
+      test_file: "plant_catalog.xml"
+      xml_folder: "src/"
+    solution_run:
+      test_file: "plant_catalog_hidden.xml"
+      xml_folder: "test/"
+    command:
+      - xmlstarlet
+      - val
+      - --well-formed
+      - err
+      - "%{xml_folder}%{test_file}"
